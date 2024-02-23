@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>1 Ano S2</title>
+
+        <style>
+            body{
+            background-color: rgb(11, 125, 255);
+            color: rgb(255, 11, 174)
+            }
+
+            .painel{
+                background-color: rgb(252, 252, 252);
+                border: 6px solid rgb(255, 11, 174);
+                width: 500px;
+                height: 700px;
+                margin: auto;
+                border-radius: 20px;
+                text-align: center;
+                padding-top: 50px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+
+            #sim{
+                width: 60px;
+                height: 40px;
+                background-color: rgb(255, 11, 174);
+                border: 2px solid white;
+                border-radius: 10px;
+                color: white;
+                margin-left: -50px;
+            }
+
+            #nao{
+                position: absolute;
+                width: 60px;
+                height: 40px;
+                background-color: rgb(255, 11, 174);
+                border: 2px solid white;
+                border-radius: 10px;
+                color: white;
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="painel">
+            <h1>Parabéns!!!!</h1>
+            <h4>Você acaba de completar 1 ano sendo a pessoa mais feliz do mundo.</h4>
+
+            <img src="https://www.icegif.com/wp-content/uploads/2021/11/icegif-1010.gif" alt="">
+
+            <h4>Deseja renovar seu contrato comigo para sempre?</h4>
+
+            <a href="https://youtu.be/78KnNoyYFSk?si=OYKwBR1HVQbCI2co"><button id="sim"> SIM! :)</button></a>
+            <button onmouseover="fuja()" id="nao"> Não :(</button>
+            </br>
+        </div>
+
+        <script>
+            function fuja(){
+                var BotaoNão = document.getElementById("nao");
+
+                var LarguraJanela = window.innerWidth;
+                var AlturaJanela = window.innerHeight;
+
+                var maxX = LarguraJanela - BotaoNão.offsetWidth;
+                var maxY = AlturaJanela - BotaoNão.offsetHeight;
+
+                var aleatorioX = Math.floor(Math.random() * maxX);
+                var aleatorioY = Math.floor(Math.random() * maxY);
+
+                BotaoNão.style.left = aleatorioX + "px";
+                BotaoNão.style.top = aleatorioY + "px";
+            }
+        </script>
+    </body>
+
+</html>
