@@ -102,7 +102,7 @@ function comparalistas(letra){
 
     if(vitoria == true)
     {
-        abreModal("PARABÉNS!", "Você concluiu o desafio do amor. Agora clique no ✈️ para ir voando até os termos de uso, leia-os atentamente pois seu presente está em jogo...");
+        abreModal("PARABÉNS!", "Você concluiu o desafio do amor. Agora clique no ✈️ para ir voando até seu presente...");
         tentativas = 0;
         piscarBotaoJogarNovamente(true);
     }
@@ -181,8 +181,8 @@ window.onclick = function(){
 function carregaListaAutomatica(){
     palavras = [
         palavra001 = {
-            nome: "RESPOSTA",
-            categoria:"Dica: Nossa primeira viagem juntas"
+            nome: "BETO CARRERO",
+            categoria:"Dica: Nossa primeira viagem juntas 😍"
         }
     ];
 }
