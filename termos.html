@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Termos de uso</title>
+
+        <style>
+            body{
+            background-color: rgb(11, 125, 255);
+            color: rgb(255, 11, 174)
+            }
+
+            .painel{
+                background-color: white;
+                border: 6px solid rgb(255, 11, 174);
+                width: 600px;
+                height: 550px;
+                padding: 10px;
+                margin: auto;
+                border-radius: 20px;
+                text-align: center;
+                padding-top: 50px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                margin-top: 200px;
+            }
+
+            #sim{
+                width: 80px;
+                height: 40px;
+                background-color: rgb(255, 11, 174);
+                border: 2px solid white;
+                border-radius: 10px;
+                color: white;
+                margin-left: -50px;
+            }
+
+            #nao{
+                position: absolute;
+                width: 80px;
+                height: 40px;
+                background-color: rgb(255, 11, 174);
+                border: 2px solid white;
+                border-radius: 10px;
+                color: white;
+                margin-left: 10px;
+            }
+
+            .bnt{
+                padding: 1px;
+                display: inline-block;
+                width: 220px;
+                height: 220px;
+                cursor: pointer;
+            }
+
+            .modal{
+                width: 700px;
+                height: 700px;
+                background-color: rgb(255, 11, 174);
+                transform: translate(-7%,-60%);
+                cursor: pointer;
+                display: none;
+                animation: animate;
+                animation-duration: 800ms;
+                padding: 30px;
+                color: white;
+            }
+            @keyframes animate{
+                from{opacity: 1;}
+                from{opacity: 0;}
+            }
+
+            .fechar{
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                float: right;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="painel">
+            <h1>Sistema de Controle</h1>
+            <h4>Você acaba de completar 1 ano sendo a pessoa mais feliz do mundo. Para renovação do seu contrato, favor leia os termos de uso descritos abaixo.</h4>
+            
+            <div onclick="acao()" class="bnt">
+                <img src="https://media.tenor.com/Z_KEDm9F_hQAAAAM/document-office.gif" alt="">
+            </div>
+            <div class="modal">
+                <div onclick="fechar()" class="fechar">✖️</div>
+                <h1>Termo de Uso</h1>
+                <h3>1. A senhorita Juliis deve sempre ser tratada feito a princesa que ela é</h3>
+                <h3>2.</h3>
+                <h3>3. Aceito participar de um desafio para provar que mereço o melhor presente de 1 ano do mundo, feito pelo meu amor.</h3>
+            </div>
+            
+           
+            <h4>Li e estou de acordo com os termos descritos no Sistema de Controle.</h4>
+
+            <a href="força.html"><button id="sim"> Aceitar :)</button></a>
+            <button onmouseover="fuja()" id="nao"> Recusar :(</button>
+            </br>
+        </div>
+
+        <script>
+            function acao(){
+                let modal = document.querySelector('.modal')
+                modal.style.display = 'block'
+            }
+
+            function fechar(){
+                let modal = document.querySelector('.modal')
+                modal.style.display = 'none'
+            }
+
+            //"PARABÉNS!", "Você concluiu o desafio do amor. Agora clique no ✈️ para ir voando até os termos de uso, leia-os atentamente pois seu presente está em jogo...");
+            //<img src="https://media.tenor.com/Z_KEDm9F_hQAAAAM/document-office.gif" alt="">
+            function fuja(){
+                var BotaoNão = document.getElementById("nao");
+
+                var LarguraJanela = window.innerWidth;
+                var AlturaJanela = window.innerHeight;
+
+                var maxX = LarguraJanela - BotaoNão.offsetWidth;
+                var maxY = AlturaJanela - BotaoNão.offsetHeight;
+
+                var aleatorioX = Math.floor(Math.random() * maxX);
+                var aleatorioY = Math.floor(Math.random() * maxY);
+
+                BotaoNão.style.left = aleatorioX + "px";
+                BotaoNão.style.top = aleatorioY + "px";
+            }
+        </script>
+    </body>
+
+</html>
