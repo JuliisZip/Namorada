@@ -1,4 +1,4 @@
-alert("QUE O DESAFIO COMEÇE ⚔️");
+//alert("QUE O DESAFIO COMEÇE ⚔️");
 
 let jogarNovamente = true;
 let tentativas = 6;
@@ -150,30 +150,11 @@ function abreModal(titulo, mensagem){
     });
 }
 
-let bntReiniciar = document.querySelector("#btnReiniciar")//coração
+let bntReiniciar = document.querySelector("#btnReiniciar")//avião
 bntReiniciar.addEventListener("click", function(){
     jogarNovamente = false;
     location.reload();
 });
-
-function listaAutomatica(){ // ativa o modo manual
-    if (jogoAutomatico == true) {
-        document.getElementById("jogarAutomatico").innerHTML = "<i class='bx bx-play-circle'></i>"
-        palavras = [];
-        jogoAutomatico = false;
-
-        document.getElementById("abreModalAddPalavra").style.display = "block";
-        document.getElementById("status").innerHTML = "Modo Manual";
-    }
-    else if(jogoAutomatico == false){ // ativa o modo automático
-        document.getElementById("jogarAutomatico").innerHTML = "<i class='bx bx-pause-circle'></i>"
-        jogoAutomatico = true;
-
-        document.getElementById("abreModalAddPalavra").style.display = "none";
-        document.getElementById("status").innerHTML = "Modo Automático";
-        
-    }
-}
 
 const modal = document.getElementById("modal-alerta");
 
