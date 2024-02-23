@@ -1,4 +1,4 @@
-alert("QUE O DESAFIO COMEÇE");
+alert("QUE O DESAFIO COMEÇE ⚔️");
 
 let jogarNovamente = true;
 let tentativas = 6;
