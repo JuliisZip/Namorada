@@ -182,7 +182,7 @@ function carregaListaAutomatica(){
     palavras = [
         palavra001 = {
             nome: "BETO CARRERO",
-            categoria:"Dica: Nossa primeira viagem juntas 😍"
+            categoria:"Dica: Nossa primeira viagem juntas"
         }
     ];
 }
